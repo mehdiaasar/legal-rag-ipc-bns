@@ -7,6 +7,9 @@ Code, corpus and evaluation data for:
 > **Human-Intelligent Systems Integration**, 7(1), 87–98, 2025.
 > [10.1007/s42454-025-00086-8](https://doi.org/10.1007/s42454-025-00086-8)
 
+**▶️ Live demo:** [huggingface.co/spaces/aasarmehdi/legal-rag-ipc-bns](https://huggingface.co/spaces/aasarmehdi/legal-rag-ipc-bns)
+— ask a question and see the retrieved statute passages behind the answer.
+
 A retrieval-augmented generation (RAG) pipeline that answers plain-language questions
 about Indian criminal law, grounded in the **Indian Penal Code (IPC)** and the
 **Bharatiya Nyaya Sanhita (BNS)**. Retrieved BNS passages are given priority over IPC
@@ -82,6 +85,13 @@ To use the interactive app once the index exists:
 ```bash
 streamlit run chat.py
 ```
+
+## Live demo
+
+The hosted Space serves this same index with **Llama 3.1 via Groq** (one of the
+paper's four evaluated backends, served without a local GPU). Its source lives in a
+separate Hugging Face repo; the app is a slim `chromadb` + `groq` implementation of the
+notebook's chain, using the identical prompt and retrieval parameters.
 
 ## Notes on the data
 
