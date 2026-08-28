@@ -1,0 +1,13 @@
+# Pinned to the versions the demo was built and tested against. The embedding
+# model in rag.py must match the one build_index.py used, so treat this file and
+# the index as a matched pair.
+streamlit==1.62.0
+langchain-core==1.6.1
+langchain-text-splitters==1.1.2
+langchain-community==0.4.2
+langchain-chroma==1.1.0
+langchain-huggingface==1.2.2
+chromadb==1.5.9
+sentence-transformers==6.0.0
+huggingface_hub==1.29.0
+pypdf==6.16.2

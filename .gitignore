@@ -15,6 +15,15 @@
 !cromadb-Copy1.ipynb
 !chat.py
 
+# --- hosted demo (Hugging Face Space) ---
+!space/
+!space/*.py
+!space/Dockerfile
+!space/*.md
+!space/requirements.txt
+!space/.dockerignore
+space/index/
+
 # --- source corpus (IPC + BNS) ---
 !ipctextcorpus.txt
 !Indian Penal Code Book.pdf
