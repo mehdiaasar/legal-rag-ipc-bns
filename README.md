@@ -13,6 +13,23 @@ about Indian criminal law, grounded in the **Indian Penal Code (IPC)** and the
 ones, so answers track the current statute while still falling back to the IPC where the
 BNS text is silent.
 
+## Live demo
+
+A hosted version runs on Hugging Face Spaces — ask it a question in the browser, no
+install and no API key:
+
+**https://huggingface.co/spaces/aasarmehdi/legal-rag-ipc-bns**
+
+The Space serves the same retrieval pipeline described below, with the OpenAI
+components swapped for models that cost a visitor nothing: embeddings run locally in
+the container on `all-MiniLM-L6-v2`, and generation goes through Hugging Face Inference
+(Llama 3.1 8B, the backend reported in the paper). Every answer still cites the statute
+page it came from, and still returns `"I don't know."` when the retrieved text does not
+support an answer.
+
+The deployment lives in [`space/`](space/) — app, Dockerfile, index builder and its
+tests. See [`space/DEPLOY.md`](space/DEPLOY.md) to stand up your own copy.
+
 ## How it works
 
 ```
@@ -41,6 +58,7 @@ exactly `"I don't know."` rather than fabricating a section or punishment.
 | --- | --- |
 | `cromadb-Copy1.ipynb` | The main pipeline — ingestion, chunking, Chroma index build, and the four LLM evaluation runs |
 | `chat.py` | Streamlit front-end that queries the built index |
+| `space/` | The hosted demo — Streamlit app, Dockerfile, index builder, tests, deploy script |
 | `legal_qav.csv` | Evaluation set: 422 legal questions with reference answers |
 | `llm_answer.csv` | Generated answers + retrieved contexts (OpenAI GPT) |
 | `llm_answer_lamma3.1.csv` | Generated answers + retrieved contexts (Llama 3.1) |
