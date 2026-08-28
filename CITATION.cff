@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper below."
+title: "Redefining legal access: a RAG-based AI system for Indian law"
+authors:
+  - family-names: Mubeen
+    given-names: Faiz
+  - family-names: Mehdi
+    given-names: Aasar
+  - family-names: Haque
+    given-names: Md. Asraful
+  - family-names: Nomani
+    given-names: M. Z. M.
+  - family-names: Uddin
+    given-names: Nawab Shahzeb
+preferred-citation:
+  type: article
+  title: "Redefining legal access: a RAG-based AI system for Indian law"
+  authors:
+    - family-names: Mubeen
+      given-names: Faiz
+    - family-names: Mehdi
+      given-names: Aasar
+    - family-names: Haque
+      given-names: Md. Asraful
+    - family-names: Nomani
+      given-names: M. Z. M.
+    - family-names: Uddin
+      given-names: Nawab Shahzeb
+  journal: "Human-Intelligent Systems Integration"
+  volume: 7
+  issue: 1
+  start: 87
+  end: 98
+  year: 2025
+  doi: "10.1007/s42454-025-00086-8"
+  url: "https://link.springer.com/article/10.1007/s42454-025-00086-8"
