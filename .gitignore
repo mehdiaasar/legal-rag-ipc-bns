@@ -9,11 +9,15 @@
 !LICENSE
 !.env.example
 !requirements.txt
+!requirements-research.txt
 !CITATION.cff
 
 # --- pipeline code ---
 !cromadb-Copy1.ipynb
 !chat.py
+
+# --- live demo (deployed on Streamlit Community Cloud) ---
+!app.py
 
 # --- source corpus (IPC + BNS) ---
 !ipctextcorpus.txt
@@ -30,6 +34,8 @@
 
 # --- never, under any circumstances ---
 .env
+.streamlit/secrets.toml
+index/
 *.sqlite3
 .DS_Store
 .ipynb_checkpoints/

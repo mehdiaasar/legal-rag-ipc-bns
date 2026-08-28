@@ -1,23 +1,15 @@
-# Retrieval / orchestration
-langchain>=0.2.0
-langchain-core>=0.2.0
-langchain-community>=0.2.0
+# Dependencies for the live Streamlit demo (app.py).
+# Streamlit Community Cloud installs this file from the repo root.
+# For the research pipeline / notebook, see requirements-research.txt.
 
-# Vector store
-chromadb>=0.5.0
+streamlit==1.40.2
+chromadb==1.0.12
+openai==1.59.6
+groq==0.13.1
+huggingface_hub==0.30.2
 
-# Embeddings + LLM backends used in the paper
-langchain-openai>=0.1.0        # OpenAI embeddings (text-embedding-ada-002) + GPT
-langchain-google-genai>=1.0.0  # Gemini 1.5 Pro
-openai>=1.30.0
-tiktoken>=0.7.0
-# Llama 3 / 3.1 are served locally via Ollama (langchain_community.llms.Ollama).
-# Install Ollama separately: https://ollama.com  then `ollama pull llama3.1`
-
-# Document loading
-pypdf>=4.2.0
-
-# Evaluation + app
-pandas>=2.0.0
-streamlit>=1.35.0
-python-dotenv>=1.0.0
+# Pin required: streamlit 1.40 constrains protobuf<6, but newer
+# googleapis-common-protos ships gencode needing protobuf>=6.33, which breaks
+# `import chromadb` via opentelemetry. 1.70.0 is the last release built against
+# protobuf 5.x. Remove only if streamlit's protobuf ceiling is raised.
+googleapis-common-protos==1.70.0
