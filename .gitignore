@@ -1,0 +1,39 @@
+# Deny everything by default, then explicitly allow what belongs in the repo.
+# This folder is a working directory with large regenerable artifacts and
+# unrelated tutorial files, so an allowlist is safer than a blocklist.
+*
+
+# --- repo metadata ---
+!.gitignore
+!README.md
+!LICENSE
+!.env.example
+!requirements.txt
+!CITATION.cff
+
+# --- pipeline code ---
+!cromadb-Copy1.ipynb
+!chat.py
+
+# --- source corpus (IPC + BNS) ---
+!ipctextcorpus.txt
+!Indian Penal Code Book.pdf
+!BNS Delhi police 2nd edition.pdf
+
+# --- evaluation set + generated answers ---
+!legal_qav.csv
+!llm_answer.csv
+!llm_answer_lamma3.1.csv
+!final_ollama_only_llm.csv
+!final_ollama3_only_llm.csv
+!final_ollama3.1_only_llm.csv
+
+# --- never, under any circumstances ---
+.env
+*.sqlite3
+.DS_Store
+.ipynb_checkpoints/
+.idea/
+venv/
+.venv/
+__pycache__/
